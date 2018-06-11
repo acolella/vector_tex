@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. -->
+    <project basedir="." default="build" name="ICS_TotalExpress">
+    <property environment="env"/>
+    <property name="junit.output.dir" value="junit"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.8"/>
+    <property name="source" value="1.8"/>
+    <path id="JUnit 4.libraryclasspath">
+        <pathelement location="../../../../../../../../Program Files (x86)/Silk/SilkTest/eclipse/plugins/org.junit_4.12.0.v201504281640/junit.jar"/>
+        <pathelement location="../../../../../../../../Program Files (x86)/Silk/SilkTest/eclipse/plugins/org.hamcrest.core_1.3.0.v201303031735.jar"/>
+    </path>
+    <path id="ICS_TotalExpress.classpath">
+        <pathelement location="bin"/>
+        <path refid="JUnit 4.libraryclasspath"/>
+        <pathelement location="../../../../GQT - Gerencia de Qualidade e Teste/Clientes/OdontoPrev/POC/client-combined-3.12.0.jar"/>
+        <pathelement location="../../../../GQT - Gerencia de Qualidade e Teste/Clientes/OdontoPrev/POC/client-combined-3.12.0-sources.jar"/>
+        <pathelement location="../../../../GQT - Gerencia de Qualidade e Teste/Clientes/OdontoPrev/POC/selenium-server-standalone-3.12.0.jar"/>
+        <pathelement location="../../../../../../Downloads/MonteMedia-0.7.7src-cc/MonteMediaCC/lib/jai_core.jar"/>
+        <pathelement location="../../../../../../Downloads/MonteMedia-0.7.7src-cc/MonteMediaCC/lib/jmf.jar"/>
+        <pathelement location="../../../../../../Downloads/MonteMedia-0.7.7src-cc/MonteMediaCC/dist/monte-cc.jar"/>
+        <pathelement location="../../../../../../.m2/repository/com/beust/jcommander/1.64/jcommander-1.64.jar"/>
+        <pathelement location="../../../../../../.m2/repository/pl/pragmatists/JUnitParams/1.1.0/JUnitParams-1.1.0.jar"/>
+        <pathelement location="../../../../../../Downloads/jar_files/bcprov-jdk15on-1.52.jar"/>
+        <pathelement location="../../../../../../Downloads/jar_files/castor-core-1.3.3.jar"/>
+        <pathelement location="../../../../../../Downloads/jar_files/castor-xml-1.3.3.jar"/>
+        <pathelement location="../../../../../../Downloads/jar_files/commons-beanutils-1.9.3.jar"/>
+        <pathelement location="../../../../../../Downloads/jar_files/commons-collections-3.2.2.jar"/>
+        <pathelement location="../../../../../../Downloads/jar_files/commons-digester-2.1.jar"/>
+        <pathelement location="../../../../../../Downloads/jar_files/commons-lang-2.6.jar"/>
+        <pathelement location="../../../../../../Downloads/jar_files/commons-logging-1.1.1.jar"/>
+        <pathelement location="../../../../../../Downloads/jar_files/core-3.2.1.jar"/>
+        <pathelement location="../../../../../../Downloads/jar_files/ecj-4.4.2.jar"/>
+        <pathelement location="../../../../../../Downloads/jar_files/icu4j-57.1.jar"/>
+        <pathelement location="../../../../../../Downloads/jar_files/itext-2.1.7.js6.jar"/>
+        <pathelement location="../../../../../../Downloads/jar_files/jackson-annotations-2.1.4.jar"/>
+        <pathelement location="../../../../../../Downloads/jar_files/jackson-core-2.1.4.jar"/>
+        <pathelement location="../../../../../../Downloads/jar_files/jackson-databind-2.1.4.jar"/>
+        <pathelement location="../../../../../../Downloads/jar_files/jakarta-regexp-1.4.jar"/>
+        <pathelement location="../../../../../../Downloads/jar_files/jasperreports-6.5.1.jar"/>
+        <pathelement location="../../../../../../Downloads/jar_files/javax.inject-1.jar"/>
+        <pathelement location="../../../../../../Downloads/jar_files/jcommon-1.0.23.jar"/>
+        <pathelement location="../../../../../../Downloads/jar_files/jfreechart-1.0.19.jar"/>
+        <pathelement location="../../../../../../Downloads/jar_files/lucene-analyzers-common-4.5.1.jar"/>
+        <pathelement location="../../../../../../Downloads/jar_files/lucene-core-4.5.1.jar"/>
+        <pathelement location="../../../../../../Downloads/jar_files/lucene-queries-4.5.1.jar"/>
+        <pathelement location="../../../../../../Downloads/jar_files/lucene-queryparser-4.5.1.jar"/>
+        <pathelement location="../../../../../../Downloads/jar_files/lucene-sandbox-4.5.1.jar"/>
+        <pathelement location="../../../../../../Downloads/jar_files/olap4j-0.9.7.309-JS-3.jar"/>
+        <pathelement location="../../../../../../Downloads/jar_files/stax-1.2.0.jar"/>
+        <pathelement location="../../../../../../Downloads/jar_files/stax-api-1.0.1.jar"/>
+        <pathelement location="../../../../../../Downloads/jar_files/stax-api-1.0-2.jar"/>
+        <pathelement location="../../../../GQT - Gerencia de Qualidade e Teste/Automação/Jars/poi-bin-3.17-20170915/poi-3.17/poi-3.17.jar"/>
+        <pathelement location="../../../../GQT - Gerencia de Qualidade e Teste/Automação/Jars/poi-bin-3.17-20170915/poi-3.17/poi-examples-3.17.jar"/>
+        <pathelement location="../../../../GQT - Gerencia de Qualidade e Teste/Automação/Jars/poi-bin-3.17-20170915/poi-3.17/poi-excelant-3.17.jar"/>
+        <pathelement location="../../../../GQT - Gerencia de Qualidade e Teste/Automação/Jars/poi-bin-3.17-20170915/poi-3.17/poi-ooxml-3.17.jar"/>
+        <pathelement location="../../../../GQT - Gerencia de Qualidade e Teste/Automação/Jars/poi-bin-3.17-20170915/poi-3.17/poi-ooxml-schemas-3.17.jar"/>
+        <pathelement location="../../../../GQT - Gerencia de Qualidade e Teste/Automação/Jars/poi-bin-3.17-20170915/poi-3.17/poi-scratchpad-3.17.jar"/>
+    </path>
+    <target name="init">
+        <mkdir dir="bin"/>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="src">
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="bin"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src"/>
+            <classpath refid="ICS_TotalExpress.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+    <target name="CT_ICS_0001 (1)">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="Reg_01_Login.CT_ICS_0001" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="ICS_TotalExpress.classpath"/>
+        </junit>
+    </target>
+    <target name="CT_ICS_0001">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="Regressivo.CT_ICS_0001" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="ICS_TotalExpress.classpath"/>
+        </junit>
+    </target>
+    <target name="CT_ICS_0002">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="Reg_02_Operações_Encomenda_AWB.CT_ICS_0002" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="ICS_TotalExpress.classpath"/>
+        </junit>
+    </target>
+    <target name="CT_ICS_0003">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="Reg_03_Coleta.CT_ICS_0003" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="ICS_TotalExpress.classpath"/>
+        </junit>
+    </target>
+    <target name="CT_ICS_0004">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="Reg_04_Transferência.CT_ICS_0004" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="ICS_TotalExpress.classpath"/>
+        </junit>
+    </target>
+    <target name="CT_ICS_0005">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="Reg_05_Embarque.CT_ICS_0005" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="ICS_TotalExpress.classpath"/>
+        </junit>
+    </target>
+    <target name="CT_ICS_0006">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="Reg_05_Embarque.CT_ICS_0006" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="ICS_TotalExpress.classpath"/>
+        </junit>
+    </target>
+    <target name="CT_ICS_0007">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="Reg_06_Consultar_Status_AWB.CT_ICS_0007" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="ICS_TotalExpress.classpath"/>
+        </junit>
+    </target>
+    <target name="LoginDefault">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="Framework.LoginDefault" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="ICS_TotalExpress.classpath"/>
+        </junit>
+    </target>
+    <target name="junitreport">
+        <junitreport todir="${junit.output.dir}">
+            <fileset dir="${junit.output.dir}">
+                <include name="TEST-*.xml"/>
+            </fileset>
+            <report format="frames" todir="${junit.output.dir}"/>
+        </junitreport>
+    </target>
+</project>
